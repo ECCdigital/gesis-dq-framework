@@ -63,7 +63,7 @@ ui <- tagList(
                           'This app provides tools that you can use to explore data quality in digital social research.
   It features a <strong>Decision Tree</strong> and an <strong>Evidence Gap Map</strong> to help you filter and review 58 cited papers based on criteria such as data type, perspective, and granularity.'
                         ))
-                        ,
+                   ,
 
                         h2(id = "paper_description", style = "color: #1E8CC8;", "Paper Description"),
                         p("In the age of digital social research, ensuring the quality of data is more important than ever. As researchers increasingly rely on digital data sources like social media, web scraping, and mobile applications, it is crucial to understand the challenges that come with using such data. This research explores the various dimensions of data quality, including accuracy, completeness, consistency, and validity, and identifies the key issues researchers face in these areas. One of the major concerns is the presence of bias, noise, and the representativeness of digital data, which can significantly impact the reliability of findings.
