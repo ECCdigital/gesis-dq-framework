@@ -142,6 +142,7 @@ To guide researchers, Daikeler et al. conducted a systematic literature review a
                )
              )
     ),
+
     tabPanel(tags$span(style = "color: #920948;", tags$b("Decision Tree")),
              value = "decision_tree",
              div(
@@ -250,8 +251,6 @@ server <- function(input, output, session) {
       )
     )
   })
-
-
   output$bar_chart <- renderPlot({
     data_long <- filtered_data() %>%
       select(Untargeted, `Social Media Data`, `Register Data`, `Survey Data`, `Sensor Data`, `Visual Data`, dummy_granularity) %>%
