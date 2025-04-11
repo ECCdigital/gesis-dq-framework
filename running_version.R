@@ -44,7 +44,27 @@ ui <- tagList(
         color: white !important;
         border-radius: 5px;
       }
-    "))
+    ")),
+    HTML(sprintf("
+      <!-- etracker code 6.0 -->
+      <script type='text/javascript'>
+         var et_pagename = '%s';
+         var et_areas    = '%s';
+      </script>
+      <script id='_etLoader'
+              type='text/javascript'
+              charset='UTF-8'
+              data-block-cookies='true'
+              data-secure-code='%s'
+              src='//code.etracker.com/code/e.js'
+              async>
+      </script>
+      <!-- etracker code 6.0 end -->
+      ",
+                 Sys.getenv('ET_PAGENAME'),
+                 Sys.getenv('ET_AREAS'),
+                 Sys.getenv('ET_SECURE_CODE')
+    ))
   ),
 
   navbarPage(
@@ -63,7 +83,7 @@ ui <- tagList(
                           '
                           This app provides tools that you can use to explore data quality frameworks for social science research. It features an interactive <strong>Decision Tree</strong> and an <strong>Evidence Gap Map</strong> to help you filter and review frameworks based on fine-grained criteria.'
                         ))
-                        ,
+                   ,
 
                         h2(id = "paper_description", style = "color: #1E8CC8;", "Empirical Foundation: Systematic Review"),
                         p(HTML("This collection of data quality frameworks is based on a systematic review outlined in        <a href='https://journals.sagepub.com/doi/10.1177/08944393241245395' target='_blank'>Daikeler et al. (2024)</a>. The study was driven by the growing use of digital behavioral data alongside traditional sources like survey data in social science research, which introduces various data quality challenges.
